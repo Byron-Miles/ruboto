@@ -1,10 +1,10 @@
-ruboto-fish
+ruboto
 ===========
 
-Demo app for learning purposes
+Demo apps for learning purposes
 ------------------------------
 
-### Environment setup:
+### Windows Environment setup:
 *Tip:* Use folders without spaces.. e.g. c:\devware\java\.. instead of c:\program files\Java\..<br />
 *Tip:* It may be possible to get it work with 64-bit Java, Android, etc, but I used 32-bit
 
@@ -32,7 +32,7 @@ Demo app for learning purposes
   - gem install ruboto
 
 ###Create project:
-  ruboto gen app --package *ruboto.fish* --path *ruboto/fish* --name *Fish* --target *android-16* --activity *Fish*
+  ruboto gen app --package *ruboto.app* --path *ruboto/app* --name *MyApp* --target *android-16* --activity *Main*
 
 ###Before compiling:
   Edit **rakelib/ruboto.rake** and change:
@@ -51,16 +51,16 @@ Demo app for learning purposes
   
   >dx_filename = "# ... /platform-tools/<strong>dx.bat</strong>"
 
-###To set emulator:
+###To set an emulator:
   emulator -avd *ICSEmulator*
 
-###To compile:
+###To compile and load to device:
   rake install
 
-###To update scripts:
+###To update scripts on device:
   rake update_scripts
 
-###To debug:
+###Debugger:
   ddms
   
   *Or to run in 'background':*
